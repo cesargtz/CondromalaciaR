@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="hero">
+        <img src="condromalacia rotuliana.jpg" alt="CR">
+    </section>
+
+    <section class="contenedor">
+        <h1>Condromalacia Rotuliana</h1>
+    </section>
+
+    <section id="Información" class="contenido1">
+        <h3>¿Qué es la condromalacia Rotuliana?</h3>
+        <p>La condromalacia rotuliana, es un ablandamiento del cartílago que se encuentra sobre la superficie posterior
+            de la rótula, está ligada un poco al síndrome rotulofemoral. La condromalacia, presenta dolor al palpar la
+            rótula, así como al permanecer mucho tiempo sentado, el dolor suele agravarse, o durante subir y bajar
+            escaleras. Suele ser más común en mujeres que en hombres, aunque se desconocen las causas exactas por las
+            que se ocasionan.
+            Esta lesión suele diagnosticarse por un especialista, ya que el cartílago cuenta con un aspecto rasgado.
+            Además, se puede diagnosticar y valorar por medio de distintas pruebas, como de desplazamiento de rótula, de
+            la bailarina, de Zholen, en esta última se puede ver alteraciones en el cartílago por un dolor incesante.
+            Aunque dentro del área y para su diagnóstico, se le suele llamar dolor anterior de la rodilla o síndrome
+            rótulofemoral. </p>
+        <h5>La condromalacia cuenta con 4 grados, con el fin de diagnosticar la gravedad de la patología</h5>
+        <ul>
+            <li>Grado I: Cambios leves en el cartílago, se recomienda evitar sobrecarga</li>
+            <li>Grado II: Algunas zonas con fisuras</li>
+            <li>Grado III: Las fisuras son mayores, causando desgaste en el cartílago</li>
+            <li>Grado IV: El cartílago está en riesgo de desaparecer, esto en los casos más extremos</li>
+        </ul>
+    </section>
+
+    <section class="interactiva">
+        <h2>¿Por qué duele?</h2>
+        <img src="diferencia CR.jpg" alt="diferencias">
+        <div class="puntos">
+
+            <button onclick="mostrarInfo('info1')">Cartílago</button>
+            <button onclick="mostrarInfo('info2')">Fricción</button>
+            <button onclick="mostrarInfo('info3')">Dolor</button>
+
+        </div>
+        <div class="info" id="info1">
+            El cartílago se debilita y pierde su capacidad de proteger la rótula.
+        </div>
+        <div class="info" id="info2">
+            La rótula roza con el hueso causando fricción y desgaste.
+        </div>
+        <div class="info" id="info3">
+            Esto genera inflamación y dolor al moverse o estar mucho tiempo sentado.
+        </div>
+    </section>
+    <script>
+        function mostrarInfo(id) {
+            let infos = document.querySelectorAll('.info');
+            infos.forEach(i => i.style.display = 'none');
+
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+    //videos
+
+
+    //seguiminto de progreso
+
+
+    //Cosas a evitar
+
+
+    //cuando acudir al medico
+
+    //directorio de especialista
+
+    //recomendaciones y test evaluativo
+
+
+</body>
+
+</html>

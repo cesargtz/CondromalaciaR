@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Mi proyecto web</title>
+</head>
+<body class="bg-slate-950 text-white flex items-center justify-center min-h-screen">
+    <div class="p-1 border border-white/10 rounded-3xl bg-linear-to-b from-white/10 to-transparent">
+        <div class="bg-slate-900 px-12 py-10 rounded-[calc(1.5rem-1px)] text-center">
+            <h1 class="text-5xl font-black italic tracking-tighter text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500">
+                ¡Hola, {{.Nombre}}!
+            </h1>
+            <p class="mt-4 text-slate-400 font-medium tracking-wide uppercase text-xs">
+                Servidor Go (librería estándar) • Estilos Tailwind v4
+            </p>
+        </div>
+    </div>
+</body>
+</html>

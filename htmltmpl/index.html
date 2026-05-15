@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio Knee</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <link rel="stylesheet" href="/assets/css/style_index.css">
+    <script type="module" src="/assets/js/app.js"></script>
+</head>
+<body>
+
+    <nav class="navbar-top">
+        <div class="user-icons">
+            <span class="icon-user" onclick="abrirAuth()" style="cursor: pointer;" font-size: 24px>👤</span>
+            <span class="icon-menu" onclick="toggleMenuLateral()" style="cursor: pointer;">☰</span>
+        </div>
+    </nav>
+
+    <div id="pantalla-acceso" class="auth-container" style="display: none;">
+    <div class="auth-card">
+        <span class="close-btn" onclick="cerrarAuth()">×</span>
+        <h2 id="auth-titulo">Crear Cuenta</h2>
+        <input type="text" id="user-input" placeholder="Nombre de usuario">
+        <input type="password" id="pass-input" placeholder="Contraseña">
+        <button onclick="ejecutarAuth()" id="btn-auth">Registrarse</button>
+        <p onclick="toggleAuth()" id="toggle-text" style="cursor:pointer;">¿Ya tienes cuenta? Inicia Sesión</p>
+    </div>
+</div>
+
+    <section class="hero">
+        <img src="/assets/img/CR.png" alt="CR" class="fondo-hero">
+        
+        <div class="app-overlay">
+            <div class="header-text">
+                <h1>BioKnee</h1>
+                <p>CONDROMALACIA ROTULIANA</p>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-item" onclick="mostrarSeccion('seccion-informacion')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3503/3503827.png" alt="Info">
+                    <span>Informacion</span>
+                </div>
+                <div class="menu-item" onclick="mostrarSeccion('seccion-videos')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4406/4406124.png" alt="Videos">
+                    <span>Videos</span>
+                </div>
+                <div class="menu-item" onclick="mostrarSeccion('seccion-recomendaciones')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Recomendaciones">
+                    <span>Recomendaciones</span>
+                </div>
+                <div class="menu-item" onclick="mostrarSeccion('seccion-cuestionario')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2666/2666505.png" alt="Formulario">
+                    <span>Formulario</span>
+                </div>
+                <div class="menu-item" onclick="mostrarSeccion('seccion-progreso')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4221/4221419.png" alt="Progreso">
+                    <span>Progreso</span>
+                </div>
+                <div class="menu-item" onclick="mostrarSeccion('seccion-directorio')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRTEri2vLZKocCQQ-d466eCV3dgo6DHfDik3vfN1mhjg&s" alt="Directorio">
+                    <span>Directorio</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="contenedor-principal">
+
+        <section id="seccion-informacion" class="content-box" style="display:none;">
+            <h2>Informacion</h2>
+            <h3>¿Qué es la condromalacia Rotuliana?</h3>
+            <p>La condromalacia rotuliana, es un ablandamiento del cartílago que se encuentra sobre la superficie posterior de la rótula, está ligada un poco al síndrome rotulofemoral. La condromalacia, presenta dolor al palpar la rótula, así como al permanecer mucho tiempo sentado, el dolor suele agravarse, o durante subir y bajar escaleras. Normalmente, la rótula se desliza suavemente sobre el fémur cuando doblas la pierna. En la condromalacia, ese cartílago deja de ser liso y se vuelve rugoso o se agrieta. Esto genera fricción, lo que causa inflamación y el característico dolor.  Suele ser más común en mujeres que en hombres, aunque se desconocen las causas exactas por las que se ocasionan.
+            Esta lesión suele diagnosticarse por un especialista, ya que el cartílago cuenta con un aspecto rasgado.
+            Además, se puede diagnosticar y valorar por medio de distintas pruebas, como de desplazamiento de rótula, de
+            la bailarina, de Zholen, en esta última se puede ver alteraciones en el cartílago por un dolor incesante.
+            Aunque dentro del área y para su diagnóstico, se le suele llamar dolor anterior de la rodilla o síndrome
+            rótulofemoral</p>
+            <h5>La condromalacia cuenta con 4 grados:</h5>
+            <ul>
+                <li>Grado I: Cambios leves en el cartílago.</li>
+                <li>Grado II: Algunas zonas con fisuras.</li>
+                <li>Grado III: Las fisuras son mayores.</li>
+                <li>Grado IV: El cartílago está en riesgo de desaparecer.</li>
+            </ul>
+            <h3>Algunas sintomas comunes son: </h3>
+            <ul>
+                <li>Dolor sordo: Especialmente al bajar escaleras, correr o caminar cuesta abajo.</li>
+                <li>El "signo de la película": Dolor después de estar sentado mucho tiempo con las rodillas dobladas (como en el cine o en la oficina).</li>
+                <li>Crepitación: Sentir (o escuchar) un "crujido" o roce al extender la pierna.</li>
+                <li>Sensación de inestabilidad: Sentir que la rodilla "se va" o falla.</li>
+            </ul>
+            <h3>Algunas de sus causas no siempre son por un golpe, aveces son cuestion de geometria corporaal, ya sea por un desequilibrio muscular, donde los cuadriceps se debilitan, la rotula no es centrada y roza en algun lado. Tambien se debe al sobreuso, es decir, realizar actividades de alto impacto repetitivo, o por alineacion, cuando la rodilla va hacia adentro o la persona tiene pie plano.</h3>
+
+            <div class="interactiva">
+                <h3>¿Por qué duele?</h3>
+                <img src="DCR.jpg" alt="diferencias" style="width:100%; border-radius:10px;">
+                <div class="puntos">
+                    <button onclick="mostrarDetalle('info1')">Cartílago</button>
+                    <button onclick="mostrarDetalle('info2')">Fricción</button>
+                    <button onclick="mostrarDetalle('info3')">Dolor</button>
+                </div>
+                <div class="info-detalle" id="info1">El cartílago se debilita y pierde su capacidad de proteger la rótula.</div>
+                <div class="info-detalle" id="info2">La rótula roza con el hueso causando fricción y desgaste.</div>
+                <div class="info-detalle" id="info3">Esto genera inflamación y dolor al moverse.</div>
+            </div>
+
+            <h3>¿Como tratarla?</h3>
+            <ul>
+                <li>Fisioterapia: Es el estándar de oro. El objetivo es fortalecer el cuádriceps y los glúteos para que la rótula se mueva por donde debe.</li>
+                <li>Modificación de actividad: Evitar temporalmente saltos o cuestas muy empinadas.</li>
+                <li>Calzado y plantillas: Corregir la pisada puede aliviar mucho la presión en la rodilla.</li>
+                <li>Suplementación: Algunos médicos sugieren colágeno o condroitina, aunque su eficacia varía según la persona.</li>
+                <li>Hielo: Para controlar la inflamación después del ejercicio.</li>
+            </ul>
+        </section>
+
+
+
+        <section id="seccion-videos" class="content-box" style="display:none;">
+            <h2>Videos</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/3p9ujnzBPpo" allowfullscreen></iframe>
+            </div>
+            <h2>¿Como detectarlo?</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/C3QK3gz0XZw" allowfullscreen></iframe>
+            </div>
+            <h2>Cuasas y sintomas</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/4UGG92LPwXY" allowfullscreen></iframe>
+            </div>
+            <h3>Ejercicios y recomendaciones</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/hoOS7U9yzyc" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/EApE4XAXhI0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="seccion-recomendaciones" class="content-box" style="display:none;">
+            <h3>Cosas que se debe evitar realizar</h3>
+            <p>Para proteger tus rodillas, debes evitar principalmente las actividades de alto impacto que impliquen saltos o carreras en superficies duras, así como las posturas de flexión profunda prolongada, como estar en cuclillas, arrodillado o sentado mucho tiempo con las piernas cruzadas. Es fundamental no abusar del uso de tacones altos, ya que alteran el eje de carga, y evitar los ejercicios de gimnasio que aíslen el cuádriceps en máquinas de extensión de pierna con mucho peso, puesto que generan una presión excesiva en la articulación. Finalmente, no ignores los chasquidos acompañados de dolor ni intentes "forzar" la articulación a través del malestar, ya que el cartílago tiene una capacidad de recuperación muy limitada y el sobreesfuerzo puede acelerar su desgaste.</p>
+            <p>Tambien evita lo siguiente</p>
+            <ul>
+                <li>Impacto consecutivo: evitar correr en superficies duras.</li>
+                <li>Flexiones profundas de la rodilla.</li>
+                <li>Sedentarismo Prolongado.</li>
+            </ul>
+            <h3>Recomendaciones a seguir</h3>
+            <p>Fortalecimiento selectivo, estiramientos y cambios en el estilo de vida. Busca fortalecer los siguientes musculos con el proposito de que estos actuen como amortiguadores</p>
+            <ul>
+                <li>Vasto Interno: Es la parte interna del cuádriceps. Si está fuerte, mantiene la rótula alineada. Un ejercicio simple es sentarte con la pierna estirada y apretar el músculo sin doblar la rodilla.</li>
+                <li>Glúteo Medio: Si tu cadera es estable, tu rodilla no se irá hacia adentro al caminar. Haz ejercicios de "clamshell" (aberturas laterales de cadera).</li>
+                <li>Isquiotibiales y Flexibilidad: Estira bien la parte posterior de la pierna. Unos "isquios" muy tensos aumentan la presión sobre la rótula.</li>
+            </ul>
+            <h3>Buscar modificar tu ergonomía</h3>
+            <ul>
+                <li>Evita la flexión máxima: Trata de no estar mucho tiempo en cuclillas o con las rodillas dobladas a más de 90°.</li>
+                <li>Estira las piernas cada 30 minutos: Si trabajas sentado, levántate o estira las piernas bajo el escritorio para liberar la presión rotuliana.</li>
+                <li>Cuidado con las escaleras: Al bajar escaleras, el impacto es hasta 3 o 4 veces tu peso corporal. Intenta bajarlas con cuidado o apoyándote en el pasamanos si hay dolor agudo.</li>
+            </ul>
+            <h3> Busca ajustar tu actividad fisica</h3>
+            <ul>
+                <li>Cuidado con las escaleras: Al bajar escaleras, el impacto es hasta 3 o 4 veces tu peso corporal. Intenta bajarlas con cuidado o apoyándote en el pasamanos si hay dolor agudo.</li>
+                <li>Superficies blandas: Si corres, prefiere tierra o césped en lugar de asfalto o cemento.</li>
+                <li>Calzado: Asegúrate de que tus zapatillas no estén desgastadas. La pérdida de amortiguación en el zapato se traduce en impacto directo a tu cartílago.</li>
+            </ul>
+        </section>
+
+        <section id="seccion-cuestionario" class="content-box" style="display:none;">
+            <h2>Cuestionario de síntomas</h2>
+            <form id="formCuestionario">
+                <label>Nombre:</label>
+                <input type="text" id="nombre" required>
+                <label>¿Te duele al subir/bajar escaleras?</label>
+                <select id="pregunta1"><option value="0">No</option><option value="2">Sí</option></select>
+                <label>¿Sientes dolor al estar mucho tiempo sentado?</label>
+                <select id="pregunta1"><option value="0">No</option><option value="2">Sí</option></select>
+                <label>¿Escuchas crujidos en la rodilla?</label>
+                <select id="pregunta1"><option value="0">No</option><option value="2">Sí</option></select>
+                <label>Nivel de dolor (1-10):</label>
+                <input type="number" id="dolor" min="1" max="10" required>
+                <button type="submit">Evaluar</button>
+            </form>
+           <div id="resultado" class="resultado"></div>
+</section>
+<script>
+// DENTRO DE TU HTML (en el script del formulario)
+document.getElementById("formCuestionario").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const p1 = parseInt(document.getElementById("pregunta1").value) || 0;
+    const p2 = parseInt(document.getElementById("pregunta2").value) || 0;
+    const p3 = parseInt(document.getElementById("pregunta3").value) || 0;
+    const dolor = parseInt(document.getElementById("dolor").value) || 0;
+
+    let puntaje = p1 + p2 + p3;
+    let resultado = document.getElementById("resultado");
+    
+    // Limpiamos clases previas
+    resultado.className = "resultado";
+
+    let mensaje = "";
+    let grado = "";
+
+    if (puntaje >= 4 && dolor >= 7) {
+        mensaje = "Posible condromalacia rotuliana (ALTA probabilidad)";
+        grado = "Grado III - IV (Avanzado)";
+        resultado.classList.add("alto");
+    } else if (puntaje >= 2 && dolor >= 4) {
+        mensaje = "Posible condromalacia (MODERADA)";
+        grado = "Grado II";
+        resultado.classList.add("medio");
+    } else {
+        mensaje = "Baja probabilidad de condromalacia";
+        grado = "Grado I o sin lesión";
+        resultado.classList.add("bajo");
+    }
+
+    resultado.innerHTML = `
+        <h3>Resultado</h3>
+        <p><strong>Paciente:</strong> ${nombre}</p>
+        <p>${mensaje}</p>
+        <p><strong>Evaluación:</strong> ${grado}</p>
+        <p><strong>Recomendación:</strong><br>
+        ${dolor >= 7 ? "⚠ Se recomienda acudir a un especialista lo antes posible." :
+        "✔ Puedes iniciar ejercicios de rehabilitación y monitoreo."}
+        </p>
+    `;
+
+    // ENVIAR AL SERVIDOR (Ajusta el puerto a 3000 que es el de tu Node.js)
+    fetch("http://localhost:3000/guardar", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nombre, puntaje, dolor, grado })
+    })
+    .then(res => console.log("Datos guardados en DB"));
+});
+</script>
+
+
+        <section id="seccion-progreso" class="content-box" style="display:none;">
+            <h2>Mi progreso de dolor</h2>
+            <canvas id="graficaDolor"></canvas>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <section id="seccion-directorio" class="content-box" style="display:none;">
+            <h2>Directorio de Especialistas</h2>
+            <p>Próximamente: Lista de médicos y clínicas recomendadas.</p>
+        </section>
+        
+</script>
+
+    </main>
+
+    <script>
+        // Función para cambiar entre las secciones del menú
+        function mostrarSeccion(id) {
+            document.querySelectorAll('.content-box').forEach(sec => sec.style.display = 'none');
+            const target = document.getElementById(id);
+            target.style.display = 'block';
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Función para los botones de la sección interactiva
+        function mostrarDetalle(id) {
+            document.querySelectorAll('.info-detalle').forEach(i => i.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+
+        // Lógica del Cuestionario y Gráfica (Tu código original integrado)
+        let grafica;
+        document.getElementById("formCuestionario").addEventListener("submit", function(e){
+            e.preventDefault();
+            const nombre = document.getElementById("nombre").value;
+            const dolor = parseInt(document.getElementById("dolor").value);
+            
+            // Lógica de evaluación y guardado...
+            let resultado = document.getElementById("resultado");
+            resultado.innerHTML = `<h3>Resultado</h3><p>Paciente: ${nombre}</p><p>Nivel de dolor registrado: ${dolor}</p>`;
+            
+            let datos = JSON.parse(localStorage.getItem("dolorDatos")) || [];
+            datos.push({nombre: nombre, dolor: dolor, fecha: new Date().toLocaleDateString()});
+            localStorage.setItem("dolorDatos", JSON.stringify(datos));
+            actualizarGrafica();
+        });
+
+        function actualizarGrafica() {
+            let datos = JSON.parse(localStorage.getItem("dolorDatos")) || [];
+            const ctx = document.getElementById("graficaDolor").getContext("2d");
+            if (grafica) grafica.destroy();
+            grafica = new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: datos.map(d => d.fecha),
+                    datasets: [{ label: "Nivel de dolor", data: datos.map(d => d.dolor), borderColor: "#a52a2a", tension: 0.3 }]
+                }
+            });
+        }
+        window.onload = actualizarGrafica;
+        actualizarGrafica();
+;
+
+
+document.getElementById("formCuestionario").addEventListener("submit", function(e){
+    e.preventDefault();
+
+
+    const nombre = document.getElementById("nombre").value;
+    const p1 = parseInt(document.getElementById("pregunta1").value);
+    const p2 = parseInt(document.getElementById("pregunta2").value);
+    const p3 = parseInt(document.getElementById("pregunta3").value);
+    const dolor = parseInt(document.getElementById("dolor").value);
+
+
+    let puntaje = p1 + p2 + p3;
+
+
+    let grado = "";
+
+
+    if (puntaje >= 4 && dolor >= 7) {
+        grado = "Grado III - IV";
+    } else if (puntaje >= 2 && dolor >= 4) {
+        grado = "Grado II";
+    } else {
+        grado = "Grado I / Sin lesión";
+    }
+
+
+    // GUARDAR EN LOCALSTORAGE
+    let datos = JSON.parse(localStorage.getItem("dolorDatos")) || [];
+
+
+    let fecha = new Date().toLocaleDateString();
+
+
+    datos.push({
+        nombre: nombre,
+        dolor: dolor,
+        fecha: fecha,
+        grado: grado
+    });
+
+
+    localStorage.setItem("dolorDatos", JSON.stringify(datos));
+
+
+    // Actualizar gráfica
+    actualizarGrafica();
+});
+
+
+// FUNCIÓN PARA LA GRÁFICA
+function actualizarGrafica() {
+    let datos = JSON.parse(localStorage.getItem("dolorDatos")) || [];
+
+
+    let fechas = datos.map(d => d.fecha);
+    let niveles = datos.map(d => d.dolor);
+
+
+    const ctx = document.getElementById("graficaDolor").getContext("2d");
+
+
+    if (grafica) {
+        grafica.destroy();
+    }
+
+
+    grafica = new Chart(ctx, {
+        type: "line",
+        data: {
+            labels: fechas,
+            datasets: [{
+                label: "Nivel de dolor",
+                data: niveles,
+                borderWidth: 3,
+                tension: 0.3
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    min: 0,
+                    max: 10
+                }
+            }
+        }
+    });
+}
+</script>
+</body>
+</html>
